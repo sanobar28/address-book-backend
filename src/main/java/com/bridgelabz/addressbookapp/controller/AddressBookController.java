@@ -1,6 +1,16 @@
+/**
+ * @author Sanobar Mujawar
+ * @since 14.08.21
+ *
+ * Purpose: Address Book app to get, add, update, and delete
+ * contacts from database using Rest-API calls.
+ */
+
 package com.bridgelabz.addressbookapp.controller;
 
-import com.bridgelabz.addressbookapp.dto.Contact;
+import com.bridgelabz.addressbookapp.dto.ContactDTO;
+import com.bridgelabz.addressbookapp.dto.ResponseDTO;
+import com.bridgelabz.addressbookapp.entity.Contact;
 import com.bridgelabz.addressbookapp.service.impl.AddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,23 +28,27 @@ public class AddressBookController {
     private AddressBookService addressBookService;
 
     @GetMapping(value = "/get")
-    public ResponseEntity<List<Contact>> getAddressBookContacts(){
-        return new ResponseEntity<>(addressBookService.getContacts(), HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> getAddressBookContacts(){
+        List<Contact> contactList = addressBookService.getContacts();
+        return new ResponseEntity<>(new ResponseDTO(contactList, "All contacts in address book"), HttpStatus.OK);
     }
 
     @PostMapping(value = "/addcontact")
-    public ResponseEntity<Contact> addContact(@Valid @RequestBody Contact contact) {
-        return new ResponseEntity<>(addressBookService.createContact(contact), HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> addContact(@RequestBody @Valid ContactDTO contactDTO) {
+        Contact contact = addressBookService.createContact(contactDTO);
+        return new ResponseEntity<>(new ResponseDTO(contact, "Contact created in address book"), HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/updatecontact")
-    public ResponseEntity<Contact> updateContact(@RequestParam (name = "id") int id,
-                                                 @Valid @RequestBody Contact contact) {
-        return new ResponseEntity<>(addressBookService.updateContact(id), HttpStatus.OK);
+    public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
+                                                    @Valid @RequestBody ContactDTO contactDTO) {
+        Contact contact = addressBookService.updateContact(contactDTO, id);
+        return new ResponseEntity<>(new ResponseDTO(contact, "Contact updated successfully"), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "/delete")
-    public ResponseEntity<String> deleteContact(@RequestParam (name = "id") int id) {
-        return new ResponseEntity<>(addressBookService.deleteContact(id), HttpStatus.OK);
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<ResponseDTO> deleteContact(@RequestParam (name = "id") int id) {
+        return new ResponseEntity<>(new ResponseDTO(addressBookService.deleteContact(id),
+                "Contact deleted successfully"), HttpStatus.OK);
     }
 }

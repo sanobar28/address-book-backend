@@ -5,9 +5,8 @@ import lombok.Data;
 import javax.validation.constraints.Pattern;
 
 @Data
-public class Contact {
+public class ContactDTO {
 
-    private int id;
 
     @Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}", message = "Invalid Name")
     private String name;
