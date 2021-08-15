@@ -31,7 +31,7 @@ public class Contact {
         this.address = contactDTO.getAddress();
         this.city = contactDTO.getCity();
         this.state = contactDTO.getState();
-        this.phone = contactDTO.getPhoneNo();
+        this.phone = contactDTO.getPhone();
         this.zip = contactDTO.getZip();
     }
 }

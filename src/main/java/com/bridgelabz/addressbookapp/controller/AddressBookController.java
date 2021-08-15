@@ -11,7 +11,7 @@ package com.bridgelabz.addressbookapp.controller;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import com.bridgelabz.addressbookapp.entity.Contact;
-import com.bridgelabz.addressbookapp.service.impl.AddressBookService;
+import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class AddressBookController {
 
     @Autowired
-    private AddressBookService addressBookService;
+    private IAddressBookService addressBookService;
 
     @GetMapping(value = "/get")
     public ResponseEntity<ResponseDTO> getAddressBookContacts(){
@@ -50,7 +50,7 @@ public class AddressBookController {
         return new ResponseEntity<>(new ResponseDTO(contact, "Contact created in address book"), HttpStatus.CREATED);
     }
 
-    
+
     @PutMapping(value = "/updatecontact")
     public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
                                                     @Valid @RequestBody ContactDTO contactDTO) {

@@ -23,6 +23,7 @@ public class AddressBookService implements IAddressBookService {
 
     /**
      * Get all contacts from address book
+     *
      * @return
      */
     public List<Contact> getContacts() {
@@ -32,12 +33,13 @@ public class AddressBookService implements IAddressBookService {
 
     /**
      * Create new contact in the address book and save in database
+     *
      * @param contactDTO
      * @return
      */
     @Override
     public Contact createContact(ContactDTO contactDTO) {
-        Contact contact = new Contact();
+        Contact contact = new Contact(contactDTO);
         log.info("Contact Created");
         return addressBookRepository.save(contact);
     }
@@ -45,26 +47,29 @@ public class AddressBookService implements IAddressBookService {
     /**
      * Update address book contact by id and save updated contact
      * in database
+     *
      * @param contactDTO
      * @param id
      * @return
      */
     @Override
     public Contact updateContact(ContactDTO contactDTO, int id) {
-       Contact contact = addressBookRepository.findById(id)
-               .orElseThrow(() -> new AddressBookException("User id not found",
-                       AddressBookException.ExceptionType.USER_NOT_FOUND));
-       contact.setName(contactDTO.getName());
-       contact.setAddress(contactDTO.getAddress());
-       contact.setCity(contactDTO.getCity());
-       contact.setState(contactDTO.getState());
-       contact.setPhone(contactDTO.getPhoneNo());
-       contact.setZip(contactDTO.getZip());
+        Contact contact = addressBookRepository.findById(id)
+                .orElseThrow(() -> new AddressBookException("User id not found",
+                        AddressBookException.ExceptionType.USER_NOT_FOUND));
+        contact.setName(contactDTO.getName());
+        contact.setAddress(contactDTO.getAddress());
+        contact.setCity(contactDTO.getCity());
+        contact.setState(contactDTO.getState());
+        contact.setPhone(contactDTO.getPhone());
+        contact.setZip(contactDTO.getZip());
+
         return addressBookRepository.save(contact);
     }
 
     /**
      * Delete contact by id
+     *
      * @param id
      * @return
      */

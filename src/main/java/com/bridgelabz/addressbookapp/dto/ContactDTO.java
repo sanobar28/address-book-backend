@@ -17,7 +17,7 @@ public class ContactDTO {
     private String state;
 
     @Pattern(regexp = "^[7-9][0-9]{9}$", message = "Invalid Phone Number")
-    private String phoneNo;
+    private String phone;
 
     @Pattern(regexp = "^[1-9][0-9]{5,}$")
     private String zip;
