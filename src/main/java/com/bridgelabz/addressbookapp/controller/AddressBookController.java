@@ -13,12 +13,15 @@ import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import com.bridgelabz.addressbookapp.entity.Contact;
 import com.bridgelabz.addressbookapp.service.impl.AddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/addressbook")
@@ -34,11 +37,20 @@ public class AddressBookController {
     }
 
     @PostMapping(value = "/addcontact")
-    public ResponseEntity<ResponseDTO> addContact(@RequestBody @Valid ContactDTO contactDTO) {
+    public ResponseEntity<ResponseDTO> addContact(@RequestBody @Valid ContactDTO contactDTO, BindingResult e) {
+        if (e.hasErrors()) {
+            List<String> error = e.getAllErrors().stream()
+                    .map(DefaultMessageSourceResolvable::getDefaultMessage)
+                    .collect(Collectors.toList());
+            return new ResponseEntity<>(new ResponseDTO(error, "Validation Error Occurred"),
+                    HttpStatus.BAD_REQUEST);
+        }
+
         Contact contact = addressBookService.createContact(contactDTO);
         return new ResponseEntity<>(new ResponseDTO(contact, "Contact created in address book"), HttpStatus.CREATED);
     }
 
+    
     @PutMapping(value = "/updatecontact")
     public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
                                                     @Valid @RequestBody ContactDTO contactDTO) {
