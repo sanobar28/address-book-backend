@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface IAddressBookService {
 
-    List<Contact> getContacts();
-    Contact createContact(ContactDTO contactDTO);
-    Contact updateContact(ContactDTO contactDTO, int id);
+    List<ContactDTO> getContacts();
+    ContactDTO createContact(ContactDTO contactDTO);
+    ContactDTO updateContact(ContactDTO contactDTO, int id);
     ResponseDTO deleteContact(int id);
 }

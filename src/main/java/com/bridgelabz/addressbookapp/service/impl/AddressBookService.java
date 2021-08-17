@@ -1,6 +1,7 @@
 package com.bridgelabz.addressbookapp.service.impl;
 
 
+import com.bridgelabz.addressbookapp.builder.AddressBuilder;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import com.bridgelabz.addressbookapp.entity.Contact;
@@ -8,10 +9,13 @@ import com.bridgelabz.addressbookapp.exception.AddressBookException;
 import com.bridgelabz.addressbookapp.repository.AddressBookRepository;
 import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.modelmapper.ModelMapper;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -20,15 +24,22 @@ public class AddressBookService implements IAddressBookService {
 
     @Autowired
     public AddressBookRepository addressBookRepository;
+    @Autowired
+    private ModelMapper modelMapper;
+    @Autowired
+    private AddressBuilder addressBuilder;
 
     /**
      * Get all contacts from address book
      *
      * @return
      */
-    public List<Contact> getContacts() {
+    @Override
+    public List<ContactDTO> getContacts() {
         log.info("getEmployee invoked");
-        return addressBookRepository.findAll();
+        return addressBookRepository.findAll().stream()
+                .map(contact -> modelMapper.map(contact, ContactDTO.class))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -38,10 +49,12 @@ public class AddressBookService implements IAddressBookService {
      * @return
      */
     @Override
-    public Contact createContact(ContactDTO contactDTO) {
-        Contact contact = new Contact(contactDTO);
+    public ContactDTO createContact(ContactDTO contactDTO) {
+        Contact contact = addressBuilder.buildContact(contactDTO);
+        contact = addressBookRepository.save(contact);
+        contact.setId(contact.getId());
         log.info("Contact Created");
-        return addressBookRepository.save(contact);
+        return contactDTO;
     }
 
     /**
@@ -53,18 +66,15 @@ public class AddressBookService implements IAddressBookService {
      * @return
      */
     @Override
-    public Contact updateContact(ContactDTO contactDTO, int id) {
+    public ContactDTO updateContact(ContactDTO contactDTO, int id) {
         Contact contact = addressBookRepository.findById(id)
                 .orElseThrow(() -> new AddressBookException("User id not found",
                         AddressBookException.ExceptionType.USER_NOT_FOUND));
-        contact.setName(contactDTO.getName());
-        contact.setAddress(contactDTO.getAddress());
-        contact.setCity(contactDTO.getCity());
-        contact.setState(contactDTO.getState());
-        contact.setPhone(contactDTO.getPhone());
-        contact.setZip(contactDTO.getZip());
-
-        return addressBookRepository.save(contact);
+       String[] ignoreFields = {"id", "name"};
+       BeanUtils.copyProperties(contactDTO, contact, ignoreFields);
+       addressBookRepository.save(contact);
+       ContactDTO contactDTOResponse = modelMapper.map(contact, ContactDTO.class);
+       return contactDTOResponse;
     }
 
     /**

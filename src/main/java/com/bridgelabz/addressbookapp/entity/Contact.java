@@ -23,15 +23,4 @@ public class Contact {
     private String phone;
     private String zip;
 
-    public Contact(){
-    }
-
-    public Contact(ContactDTO contactDTO){
-        this.name = contactDTO.getName();
-        this.address = contactDTO.getAddress();
-        this.city = contactDTO.getCity();
-        this.state = contactDTO.getState();
-        this.phone = contactDTO.getPhone();
-        this.zip = contactDTO.getZip();
-    }
 }
