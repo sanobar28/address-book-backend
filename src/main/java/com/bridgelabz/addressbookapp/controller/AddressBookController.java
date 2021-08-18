@@ -10,7 +10,6 @@ package com.bridgelabz.addressbookapp.controller;
 
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
-import com.bridgelabz.addressbookapp.entity.Contact;
 import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
@@ -67,7 +66,14 @@ public class AddressBookController {
      */
     @PutMapping(value = "/updatecontact")
     public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
-                                                    @Valid @RequestBody ContactDTO contactDTO) {
+                                                     @RequestBody @Valid ContactDTO contactDTO, BindingResult e) {
+        if (e.hasErrors()) {
+            List<String> error = e.getAllErrors().stream()
+                    .map(DefaultMessageSourceResolvable::getDefaultMessage)
+                    .collect(Collectors.toList());
+            return new ResponseEntity<>(new ResponseDTO(error, "Validation Error Occurred"),
+                    HttpStatus.BAD_REQUEST);
+        }
         ContactDTO contactDTO1 = addressBookService.updateContact(contactDTO, id);
         return new ResponseEntity<>(new ResponseDTO(contactDTO1, "Contact updated successfully"), HttpStatus.OK);
     }

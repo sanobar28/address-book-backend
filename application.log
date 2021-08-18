@@ -1,0 +1,9 @@
+2021-08-17 16:21:25.775  INFO 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.12 on LAPTOP-MQKAP2C2 with PID 19852 (C:\Users\namir\IdeaProjects\addressbookapp\target\classes started by namir in C:\Users\namir\IdeaProjects\addressbookapp)
+2021-08-17 16:21:25.775 DEBUG 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 16:21:25.775  INFO 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-08-17 16:21:29.212  WARN 19852 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-17 16:21:29.556  WARN 19852 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-08-17 16:21:29.858  INFO 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 4.53 seconds (JVM running for 5.116)
+2021-08-17 16:21:29.858  INFO 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-08-17 16:21:29.858  INFO 19852 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-08-17 16:21:45.090  INFO 19852 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getEmployee invoked

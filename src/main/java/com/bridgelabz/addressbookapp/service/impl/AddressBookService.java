@@ -1,5 +1,9 @@
-package com.bridgelabz.addressbookapp.service.impl;
+/**
+ * @author Sanobar Mujawar
+ * @since 14.08.2021
+ */
 
+package com.bridgelabz.addressbookapp.service.impl;
 
 import com.bridgelabz.addressbookapp.builder.AddressBuilder;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
@@ -36,7 +40,7 @@ public class AddressBookService implements IAddressBookService {
      */
     @Override
     public List<ContactDTO> getContacts() {
-        log.info("getEmployee invoked");
+        log.info("getContacts invoked");
         return addressBookRepository.findAll().stream()
                 .map(contact -> modelMapper.map(contact, ContactDTO.class))
                 .collect(Collectors.toList());
@@ -50,10 +54,10 @@ public class AddressBookService implements IAddressBookService {
      */
     @Override
     public ContactDTO createContact(ContactDTO contactDTO) {
+        log.info("createContact invoked");
         Contact contact = addressBuilder.buildContact(contactDTO);
         contact = addressBookRepository.save(contact);
         contact.setId(contact.getId());
-        log.info("Contact Created");
         return contactDTO;
     }
 
@@ -67,6 +71,7 @@ public class AddressBookService implements IAddressBookService {
      */
     @Override
     public ContactDTO updateContact(ContactDTO contactDTO, int id) {
+        log.info("updateContact invoked");
         Contact contact = addressBookRepository.findById(id)
                 .orElseThrow(() -> new AddressBookException("User id not found",
                         AddressBookException.ExceptionType.USER_NOT_FOUND));
@@ -85,6 +90,7 @@ public class AddressBookService implements IAddressBookService {
      */
     @Override
     public ResponseDTO deleteContact(int id) {
+        log.info("deleteContact invoked");
         addressBookRepository.deleteById(id);
         return new ResponseDTO(id, "Contact deleted");
     }
