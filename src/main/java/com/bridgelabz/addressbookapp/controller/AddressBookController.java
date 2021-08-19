@@ -46,14 +46,7 @@ public class AddressBookController {
      * @return
      */
     @PostMapping(value = "/addcontact")
-    public ResponseEntity<ResponseDTO> addContact(@RequestBody @Valid ContactDTO contactDTO, BindingResult e) {
-        if (e.hasErrors()) {
-            List<String> error = e.getAllErrors().stream()
-                    .map(DefaultMessageSourceResolvable::getDefaultMessage)
-                    .collect(Collectors.toList());
-            return new ResponseEntity<>(new ResponseDTO(error, "Validation Error Occurred"),
-                    HttpStatus.BAD_REQUEST);
-        }
+    public ResponseEntity<ResponseDTO> addContact(@RequestBody @Valid ContactDTO contactDTO) {
         ContactDTO contactDTO1 = addressBookService.createContact(contactDTO);
         return new ResponseEntity<>(new ResponseDTO(contactDTO1, "Contact created in address book"), HttpStatus.CREATED);
     }
@@ -66,14 +59,7 @@ public class AddressBookController {
      */
     @PutMapping(value = "/updatecontact")
     public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
-                                                     @RequestBody @Valid ContactDTO contactDTO, BindingResult e) {
-        if (e.hasErrors()) {
-            List<String> error = e.getAllErrors().stream()
-                    .map(DefaultMessageSourceResolvable::getDefaultMessage)
-                    .collect(Collectors.toList());
-            return new ResponseEntity<>(new ResponseDTO(error, "Validation Error Occurred"),
-                    HttpStatus.BAD_REQUEST);
-        }
+                                                     @RequestBody @Valid ContactDTO contactDTO) {
         ContactDTO contactDTO1 = addressBookService.updateContact(contactDTO, id);
         return new ResponseEntity<>(new ResponseDTO(contactDTO1, "Contact updated successfully"), HttpStatus.OK);
     }

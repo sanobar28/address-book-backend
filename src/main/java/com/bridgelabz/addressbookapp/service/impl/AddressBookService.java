@@ -7,7 +7,6 @@ package com.bridgelabz.addressbookapp.service.impl;
 
 import com.bridgelabz.addressbookapp.builder.AddressBuilder;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
-import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import com.bridgelabz.addressbookapp.entity.Contact;
 import com.bridgelabz.addressbookapp.exception.AddressBookException;
 import com.bridgelabz.addressbookapp.repository.AddressBookRepository;
@@ -89,10 +88,10 @@ public class AddressBookService implements IAddressBookService {
      * @return
      */
     @Override
-    public ResponseDTO deleteContact(int id) {
+    public String deleteContact(int id) {
         log.info("deleteContact invoked");
         addressBookRepository.deleteById(id);
-        return new ResponseDTO(id, "Contact deleted");
+        return "Contact deleted";
     }
 
 }
