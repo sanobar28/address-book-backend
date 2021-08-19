@@ -74,7 +74,7 @@ public class AddressBookService implements IAddressBookService {
         Contact contact = addressBookRepository.findById(id)
                 .orElseThrow(() -> new AddressBookException("User id not found",
                         AddressBookException.ExceptionType.USER_NOT_FOUND));
-       String[] ignoreFields = {"id", "name"};
+       String[] ignoreFields = {"id", "createdDate"};
        BeanUtils.copyProperties(contactDTO, contact, ignoreFields);
        addressBookRepository.save(contact);
        ContactDTO contactDTOResponse = modelMapper.map(contact, ContactDTO.class);
