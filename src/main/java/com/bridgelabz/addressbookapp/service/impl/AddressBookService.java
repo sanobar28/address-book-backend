@@ -69,7 +69,7 @@ public class AddressBookService implements IAddressBookService {
      * @return
      */
     @Override
-    public ContactDTO updateContact(ContactDTO contactDTO, int id) {
+    public ContactDTO updateContact(int id, ContactDTO contactDTO) {
         log.info("updateContact invoked");
         Contact contact = addressBookRepository.findById(id)
                 .orElseThrow(() -> new AddressBookException("User id not found",

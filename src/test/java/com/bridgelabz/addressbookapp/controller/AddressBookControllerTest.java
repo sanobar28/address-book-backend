@@ -69,7 +69,7 @@ public class AddressBookControllerTest {
         contactDTO.setPhone("7860936702");
         contactDTO.setZip("402103");
 
-        when(addressBookService.updateContact(contactDTO, id)).thenReturn(new ContactDTO());
+        when(addressBookService.updateContact(id, contactDTO)).thenReturn(new ContactDTO());
         ResponseEntity<ResponseDTO> responseEntity = addressBookController.updateContact(id, contactDTO);
 
         assertNotNull(responseEntity);

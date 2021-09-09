@@ -20,6 +20,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping(value = "/addressbook")
 public class AddressBookController {
 
@@ -54,10 +55,10 @@ public class AddressBookController {
      * @param contactDTO
      * @return
      */
-    @PutMapping(value = "/updatecontact")
-    public ResponseEntity<ResponseDTO> updateContact(@RequestParam (name = "id") int id,
+    @PutMapping(value = "/updatecontact/{id}")
+    public ResponseEntity<ResponseDTO> updateContact(@PathVariable (name = "id") int id,
                                                      @RequestBody @Valid ContactDTO contactDTO) {
-        ContactDTO contactDTO1 = addressBookService.updateContact(contactDTO, id);
+        ContactDTO contactDTO1 = addressBookService.updateContact(id, contactDTO);
         return new ResponseEntity<>(new ResponseDTO(contactDTO1, "Contact updated successfully"), HttpStatus.OK);
     }
 
@@ -66,8 +67,8 @@ public class AddressBookController {
      * @param id
      * @return
      */
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<ResponseDTO> deleteContact(@RequestParam (name = "id") int id) {
+    @DeleteMapping(value = "deletecontact/{id}")
+    public ResponseEntity<ResponseDTO> deleteContact(@PathVariable (name = "id") int id) {
         return new ResponseEntity<>(new ResponseDTO(addressBookService.deleteContact(id),
                 "Contact deleted successfully"), HttpStatus.OK);
     }

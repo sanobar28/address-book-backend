@@ -6,13 +6,11 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GeneratorType;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
+@Table(uniqueConstraints={@UniqueConstraint(columnNames = {"phone"})})
 @Entity
 public class Contact {
 
@@ -26,9 +24,9 @@ public class Contact {
     private String phone;
     private String zip;
 
-    @CreationTimestamp
-    private LocalDateTime createdDate;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedDate;
+//    @CreationTimestamp
+//    private LocalDateTime createdDate;
+//
+//    @UpdateTimestamp
+//    private LocalDateTime updatedDate;
 }

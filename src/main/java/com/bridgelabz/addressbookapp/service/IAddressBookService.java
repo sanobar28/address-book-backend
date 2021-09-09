@@ -8,6 +8,6 @@ public interface IAddressBookService {
 
     List<ContactDTO> getContacts();
     ContactDTO createContact(ContactDTO contactDTO);
-    ContactDTO updateContact(ContactDTO contactDTO, int id);
+    ContactDTO updateContact(int id, ContactDTO contactDTO);
     String deleteContact(int id);
 }

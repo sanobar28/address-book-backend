@@ -1,112 +1,99 @@
-2021-08-19 19:20:36.564  INFO 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.12 on LAPTOP-MQKAP2C2 with PID 7604 (C:\Users\namir\IdeaProjects\addressbookapp\target\classes started by namir in C:\Users\namir\IdeaProjects\addressbookapp)
-2021-08-19 19:20:36.582 DEBUG 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-19 19:20:36.582  INFO 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
-2021-08-19 19:20:41.787  WARN 7604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-19 19:20:42.244  WARN 7604 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-08-19 19:20:42.623  INFO 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 6.723 seconds (JVM running for 7.585)
-2021-08-19 19:20:42.638  INFO 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
-2021-08-19 19:20:42.638  INFO 7604 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
-2021-08-19 19:21:26.158  INFO 7604 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-08-19 19:22:34.341  INFO 7604 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-08-19 19:24:17.806  INFO 7604 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-08-19 19:24:24.681  INFO 7604 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-08-19 19:24:30.152  INFO 7604 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-08-19 19:24:36.390  INFO 7604 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-08-19 19:24:36.399 ERROR 7604 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: No class com.bridgelabz.addressbookapp.entity.Contact entity with id 9 exists!] with root cause
-
-org.springframework.dao.EmptyResultDataAccessException: No class com.bridgelabz.addressbookapp.entity.Contact entity with id 9 exists!
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:166) ~[spring-data-jpa-2.5.3.jar:2.5.3]
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408) ~[na:na]
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:165) ~[spring-data-jpa-2.5.3.jar:2.5.3]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.3.jar:2.5.3]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.9.jar:5.3.9]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.9.jar:5.3.9]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.9.jar:5.3.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.9.jar:5.3.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.3.jar:2.5.3]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.9.jar:5.3.9]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.9.jar:5.3.9]
-	at com.sun.proxy.$Proxy95.deleteById(Unknown Source) ~[na:na]
-	at com.bridgelabz.addressbookapp.service.impl.AddressBookService.deleteContact(AddressBookService.java:93) ~[classes/:na]
-	at com.bridgelabz.addressbookapp.controller.AddressBookController.deleteContact(AddressBookController.java:71) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.50.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.50.jar:9.0.50]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-2021-08-19 19:25:22.361  INFO 7604 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-08-19 19:26:46.088  INFO 7604 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-08-19 19:28:09.454  INFO 7604 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : updateContact invoked
-2021-08-19 19:29:04.340  INFO 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.12 on LAPTOP-MQKAP2C2 with PID 19452 (C:\Users\namir\IdeaProjects\addressbookapp\target\classes started by namir in C:\Users\namir\IdeaProjects\addressbookapp)
-2021-08-19 19:29:04.340 DEBUG 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-19 19:29:04.340  INFO 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
-2021-08-19 19:29:08.595  WARN 19452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-19 19:29:09.018  WARN 19452 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-08-19 19:29:09.379  INFO 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 5.619 seconds (JVM running for 6.33)
-2021-08-19 19:29:09.379  INFO 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
-2021-08-19 19:29:09.379  INFO 19452 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-08 15:48:14.288  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 16720 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-08 15:48:14.369 DEBUG 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-08 15:48:14.370  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-08 15:48:24.870  WARN 16720 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-08 15:48:25.592  WARN 16720 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-08 15:48:26.094  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 13.4 seconds (JVM running for 17.737)
+2021-09-08 15:48:26.100  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-08 15:48:26.102  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-08 15:51:46.321  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 15:52:17.345  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 15:53:00.890  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-08 15:53:01.496  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 15:53:26.596  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : deleteContact invoked
+2021-09-08 15:53:26.814  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 15:58:55.793  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:10:53.043  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:11:50.816  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-08 16:11:51.093  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:13:37.070  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:14:08.642  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:14:12.534  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:16:48.211  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:43:10.461  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:43:29.900  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:43:39.164  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:44:39.657  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:45:00.886  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:45:43.808  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:45:49.696  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:46:29.679  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:46:36.702  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:58:39.844  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:58:43.488  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:58:49.855  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:59:04.361  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 16:59:43.936  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:00:46.450  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:01:32.087  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-08 17:01:32.354  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:01:37.870  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : deleteContact invoked
+2021-09-08 17:01:37.989  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:02:04.368  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:02:58.790  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:03:04.080  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:03:15.579  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:04:38.892  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 17:04:49.256  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:12:00.720  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:12:56.848  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:14:37.586  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:15:48.141  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:15:53.361  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:15:59.690  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:16:51.015  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:16:51.379  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:13.551  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:13.666  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:20.296  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:20.390  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:32.163  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:32.269  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:55.246  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:18:55.300  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:03.303  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:05.244  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:11.337  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:11.668  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:16.226  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:16.906  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:21.854  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:22.201  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:33.534  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:33.717  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:41.918  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:41.990  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:47.361  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:47.517  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:54.880  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:19:55.124  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:20:00.776  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:20:01.480  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:20:26.942  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 18:20:27.110  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 19:10:59.957  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 21:19:40.870  WARN 16720 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h7m44s899ms606µs100ns).
+2021-09-08 21:19:46.189  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 23:23:53.161  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 13480 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-08 23:23:53.168 DEBUG 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-08 23:23:53.168  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-08 23:24:04.811  WARN 13480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-08 23:24:05.352  WARN 13480 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-08 23:24:05.850  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 13.845 seconds (JVM running for 15.211)
+2021-09-08 23:24:05.856  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-08 23:24:05.859  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-08 23:24:25.023  INFO 13480 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-08 23:25:20.769  INFO 13480 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-08 23:25:21.102  WARN 13480 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2021-09-08 23:25:21.104 ERROR 13480 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '8965045672' for key 'contact.UKn07fa8c8nqso88ftmqd0t50uh'
+2021-09-08 23:25:21.205  WARN 13480 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [contact.UKn07fa8c8nqso88ftmqd0t50uh]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]

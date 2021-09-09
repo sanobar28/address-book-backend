@@ -2,11 +2,14 @@ package com.bridgelabz.addressbookapp.dto;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Pattern;
 
 @Data
 public class ContactDTO {
 
+
+    private int id;
 
     @Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}", message = "Invalid Name")
     private String name;
@@ -17,6 +20,7 @@ public class ContactDTO {
     private String state;
 
     @Pattern(regexp = "^[7-9][0-9]{9}$", message = "Invalid Phone Number")
+    @Column(unique=true)
     private String phone;
 
     @Pattern(regexp = "^[1-9][0-9]{5,}$")
