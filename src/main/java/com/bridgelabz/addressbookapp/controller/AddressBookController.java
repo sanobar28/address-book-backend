@@ -10,6 +10,7 @@ package com.bridgelabz.addressbookapp.controller;
 
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
+import com.bridgelabz.addressbookapp.dto.StateDTO;
 import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -71,5 +72,17 @@ public class AddressBookController {
     public ResponseEntity<ResponseDTO> deleteContact(@PathVariable (name = "id") int id) {
         return new ResponseEntity<>(new ResponseDTO(addressBookService.deleteContact(id),
                 "Contact deleted successfully"), HttpStatus.OK);
+    }
+
+
+    /**
+     * To get state and there cities from state repository
+     * @return
+     */
+    @GetMapping(value = "/getStateAndCity")
+    public ResponseEntity<ResponseDTO> getStateDetails() {
+        List<StateDTO> stateList = addressBookService.getStateAndCity();
+        ResponseDTO responseDTO = new ResponseDTO(stateList, "Fetched all State Details");
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 }

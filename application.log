@@ -1,99 +1,294 @@
-2021-09-08 15:48:14.288  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 16720 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
-2021-09-08 15:48:14.369 DEBUG 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-09-08 15:48:14.370  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
-2021-09-08 15:48:24.870  WARN 16720 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-09-08 15:48:25.592  WARN 16720 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-09-08 15:48:26.094  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 13.4 seconds (JVM running for 17.737)
-2021-09-08 15:48:26.100  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
-2021-09-08 15:48:26.102  INFO 16720 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
-2021-09-08 15:51:46.321  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 15:52:17.345  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 15:53:00.890  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-09-08 15:53:01.496  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 15:53:26.596  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-09-08 15:53:26.814  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 15:58:55.793  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:10:53.043  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:11:50.816  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-09-08 16:11:51.093  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:13:37.070  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:14:08.642  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:14:12.534  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:16:48.211  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:43:10.461  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:43:29.900  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:43:39.164  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:44:39.657  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:45:00.886  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:45:43.808  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:45:49.696  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:46:29.679  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:46:36.702  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:58:39.844  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:58:43.488  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:58:49.855  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:59:04.361  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 16:59:43.936  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:00:46.450  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:01:32.087  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-09-08 17:01:32.354  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:01:37.870  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : deleteContact invoked
-2021-09-08 17:01:37.989  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:02:04.368  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:02:58.790  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:03:04.080  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:03:15.579  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:04:38.892  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 17:04:49.256  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:12:00.720  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:12:56.848  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:14:37.586  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:15:48.141  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:15:53.361  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:15:59.690  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:16:51.015  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:16:51.379  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:13.551  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:13.666  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:20.296  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:20.390  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:32.163  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:32.269  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:55.246  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:18:55.300  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:03.303  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:05.244  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:11.337  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:11.668  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:16.226  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:16.906  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:21.854  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:22.201  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:33.534  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:33.717  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:41.918  INFO 16720 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:41.990  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:47.361  INFO 16720 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:47.517  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:54.880  INFO 16720 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:19:55.124  INFO 16720 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:20:00.776  INFO 16720 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:20:01.480  INFO 16720 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:20:26.942  INFO 16720 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 18:20:27.110  INFO 16720 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 19:10:59.957  INFO 16720 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 21:19:40.870  WARN 16720 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h7m44s899ms606µs100ns).
-2021-09-08 21:19:46.189  INFO 16720 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 23:23:53.161  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 13480 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
-2021-09-08 23:23:53.168 DEBUG 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-09-08 23:23:53.168  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
-2021-09-08 23:24:04.811  WARN 13480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-09-08 23:24:05.352  WARN 13480 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-09-08 23:24:05.850  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 13.845 seconds (JVM running for 15.211)
-2021-09-08 23:24:05.856  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
-2021-09-08 23:24:05.859  INFO 13480 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
-2021-09-08 23:24:25.023  INFO 13480 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
-2021-09-08 23:25:20.769  INFO 13480 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : createContact invoked
-2021-09-08 23:25:21.102  WARN 13480 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
-2021-09-08 23:25:21.104 ERROR 13480 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '8965045672' for key 'contact.UKn07fa8c8nqso88ftmqd0t50uh'
-2021-09-08 23:25:21.205  WARN 13480 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [contact.UKn07fa8c8nqso88ftmqd0t50uh]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-09-13 08:24:36.961  WARN 10768 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21h9m38s867ms257µs900ns).
+2021-09-13 13:13:38.009  WARN 10768 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s318ms29µs800ns).
+2021-09-13 15:44:32.871  WARN 10768 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31m19s577ms262µs300ns).
+2021-09-13 16:06:06.025  INFO 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 18864 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:06:06.031 DEBUG 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:06:06.031  INFO 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:06:17.582  WARN 18864 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table city add constraint FKf12nebx60hv8a88tu70h4gonr foreign key (id) references state (id)" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table city add constraint FKf12nebx60hv8a88tu70h4gonr foreign key (id) references state (id)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:562) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:507) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:433) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:249) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.bridgelabz.addressbookapp.AddressBookAppApplication.main(AddressBookAppApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`addressbook_db`.`#sql-10f4_b3`, CONSTRAINT `FKf12nebx60hv8a88tu70h4gonr` FOREIGN KEY (`id`) REFERENCES `state` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 38 common frames omitted
+
+2021-09-13 16:06:20.085  WARN 18864 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:06:21.597  WARN 18864 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:06:22.640  INFO 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 17.775 seconds (JVM running for 19.463)
+2021-09-13 16:06:22.648  INFO 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:06:22.649  INFO 18864 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:07:38.543  INFO 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 19252 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:07:38.549 DEBUG 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:07:38.550  INFO 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:07:46.846  WARN 19252 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:07:48.039  WARN 19252 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:07:48.917  INFO 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 11.701 seconds (JVM running for 13.175)
+2021-09-13 16:07:48.923  INFO 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:07:48.926  INFO 19252 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:09:29.134  INFO 19252 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:09:38.326  INFO 19252 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:10:11.073  INFO 19252 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:15:51.757  INFO 19252 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:21:45.871  INFO 19252 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:27:20.358  INFO 19252 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:37:13.322  INFO 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 12480 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:37:13.328 DEBUG 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:37:13.329  INFO 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:37:27.595  WARN 12480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:37:28.816  WARN 12480 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:37:29.706  INFO 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 17.529 seconds (JVM running for 19.052)
+2021-09-13 16:37:29.712  INFO 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:37:29.715  INFO 12480 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:39:25.797  INFO 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 7360 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:39:25.802 DEBUG 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:39:25.804  INFO 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:39:34.243  WARN 7360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:39:35.580  WARN 7360 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:39:36.530  INFO 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 11.872 seconds (JVM running for 13.229)
+2021-09-13 16:39:36.537  INFO 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:39:36.540  INFO 7360 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:44:06.707  INFO 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 17452 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:44:06.736 DEBUG 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:44:06.736  INFO 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:44:15.836  WARN 17452 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table city add constraint FKpwxgf6kifeok6n9coa0933qqu foreign key (city_id) references city (id)" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table city add constraint FKpwxgf6kifeok6n9coa0933qqu foreign key (city_id) references city (id)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:562) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:507) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:433) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:249) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.bridgelabz.addressbookapp.AddressBookAppApplication.main(AddressBookAppApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`addressbook_db`.`#sql-10f4_dd`, CONSTRAINT `FKpwxgf6kifeok6n9coa0933qqu` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 38 common frames omitted
+
+2021-09-13 16:44:17.559  WARN 17452 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:44:19.011  WARN 17452 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:44:20.127  INFO 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 14.632 seconds (JVM running for 16.106)
+2021-09-13 16:44:20.138  INFO 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:44:20.139  INFO 17452 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:49:00.799  INFO 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 9264 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:49:00.806 DEBUG 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:49:00.806  INFO 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:49:15.425  WARN 9264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:49:16.685  WARN 9264 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:49:17.678  INFO 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 18.221 seconds (JVM running for 19.744)
+2021-09-13 16:49:17.685  INFO 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:49:17.688  INFO 9264 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:49:48.331  INFO 9264 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:52:07.937  INFO 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 9836 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:52:07.943 DEBUG 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:52:07.944  INFO 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:52:17.301  WARN 9836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:52:18.548  WARN 9836 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:52:19.403  INFO 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 12.663 seconds (JVM running for 14.171)
+2021-09-13 16:52:19.410  INFO 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:52:19.412  INFO 9836 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:53:30.022  INFO 9836 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:53:32.128  INFO 9836 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:55:21.785  INFO 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 12116 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 16:55:21.795 DEBUG 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 16:55:21.796  INFO 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 16:55:34.415  WARN 12116 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 16:55:35.672  WARN 12116 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 16:55:36.558  INFO 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 15.886 seconds (JVM running for 17.173)
+2021-09-13 16:55:36.564  INFO 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 16:55:36.567  INFO 12116 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 16:56:38.006  INFO 12116 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:56:43.478  INFO 12116 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:56:46.962  INFO 12116 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:57:33.793  INFO 12116 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 16:57:35.358  INFO 12116 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:58:21.064  INFO 12116 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:58:24.505  INFO 12116 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 16:58:27.421  INFO 12116 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:10:03.146  INFO 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 17912 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 17:10:03.155 DEBUG 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 17:10:03.156  INFO 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 17:10:14.099  WARN 17912 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table city add constraint FKf12nebx60hv8a88tu70h4gonr foreign key (id) references state (id)" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table city add constraint FKf12nebx60hv8a88tu70h4gonr foreign key (id) references state (id)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:562) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:507) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:433) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:249) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.bridgelabz.addressbookapp.AddressBookAppApplication.main(AddressBookAppApplication.java:16) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`addressbook_db`.`#sql-10f4_105`, CONSTRAINT `FKf12nebx60hv8a88tu70h4gonr` FOREIGN KEY (`id`) REFERENCES `state` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.26.jar:8.0.26]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	... 38 common frames omitted
+
+2021-09-13 17:10:16.209  WARN 17912 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 17:10:17.585  WARN 17912 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 17:10:18.500  INFO 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 16.979 seconds (JVM running for 18.854)
+2021-09-13 17:10:18.505  INFO 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 17:10:18.507  INFO 17912 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 17:12:13.930  INFO 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : Starting AddressBookAppApplication using Java 11.0.11 on LAPTOP-A808IRQG with PID 17268 (C:\Users\User\IdeaProjects\address-book-backend\target\classes started by User in C:\Users\User\IdeaProjects\address-book-backend)
+2021-09-13 17:12:13.937 DEBUG 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-09-13 17:12:13.938  INFO 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : The following profiles are active: dev
+2021-09-13 17:12:24.164  WARN 17268 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-13 17:12:25.478  WARN 17268 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-09-13 17:12:26.366  INFO 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : Started AddressBookAppApplication in 13.597 seconds (JVM running for 14.928)
+2021-09-13 17:12:26.372  INFO 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : Address Book Application Started in DEV Environment
+2021-09-13 17:12:26.374  INFO 17268 --- [restartedMain] c.b.a.AddressBookAppApplication          : inside main method
+2021-09-13 17:13:14.261  INFO 17268 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:13:16.476  INFO 17268 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:14:36.994  INFO 17268 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-13 17:14:37.420  INFO 17268 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:17:17.129  INFO 17268 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:17:20.016  INFO 17268 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : deleteContact invoked
+2021-09-13 17:17:20.262  INFO 17268 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:17:23.779  INFO 17268 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:18:05.306  INFO 17268 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : createContact invoked
+2021-09-13 17:18:05.663  INFO 17268 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:18:09.918  INFO 17268 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:19:41.974  INFO 17268 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:24:43.598  INFO 17268 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:24:49.614  INFO 17268 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:25:45.603  INFO 17268 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:25:53.103  INFO 17268 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:25:54.954  INFO 17268 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:16.613  INFO 17268 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:21.586  INFO 17268 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:25.345  INFO 17268 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:32.295  INFO 17268 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:35.194  INFO 17268 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:37.736  INFO 17268 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:39.267  INFO 17268 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:41.624  INFO 17268 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:46.457  INFO 17268 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:27:50.938  INFO 17268 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:28:25.329  INFO 17268 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:28:35.750  INFO 17268 --- [http-nio-8080-exec-6] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:28:40.686  INFO 17268 --- [http-nio-8080-exec-7] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:23.808  INFO 17268 --- [http-nio-8080-exec-8] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:32.411  INFO 17268 --- [http-nio-8080-exec-9] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:41.377  INFO 17268 --- [http-nio-8080-exec-10] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:44.903  INFO 17268 --- [http-nio-8080-exec-1] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:47.073  INFO 17268 --- [http-nio-8080-exec-2] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:29:57.520  INFO 17268 --- [http-nio-8080-exec-3] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()
+2021-09-13 17:30:01.199  INFO 17268 --- [http-nio-8080-exec-4] c.b.a.service.impl.AddressBookService    : getContacts invoked
+2021-09-13 17:30:03.518  INFO 17268 --- [http-nio-8080-exec-5] c.b.a.service.impl.AddressBookService    : Inside getStateAndCity()

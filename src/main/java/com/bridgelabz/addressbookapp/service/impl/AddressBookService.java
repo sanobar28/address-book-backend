@@ -7,9 +7,11 @@ package com.bridgelabz.addressbookapp.service.impl;
 
 import com.bridgelabz.addressbookapp.builder.AddressBuilder;
 import com.bridgelabz.addressbookapp.dto.ContactDTO;
+import com.bridgelabz.addressbookapp.dto.StateDTO;
 import com.bridgelabz.addressbookapp.entity.Contact;
 import com.bridgelabz.addressbookapp.exception.AddressBookException;
 import com.bridgelabz.addressbookapp.repository.AddressBookRepository;
+import com.bridgelabz.addressbookapp.repository.StateRepository;
 import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -27,6 +29,8 @@ public class AddressBookService implements IAddressBookService {
 
     @Autowired
     public AddressBookRepository addressBookRepository;
+    @Autowired
+    public StateRepository stateRepository;
     @Autowired
     private ModelMapper modelMapper;
     @Autowired
@@ -94,4 +98,18 @@ public class AddressBookService implements IAddressBookService {
         return "Contact deleted";
     }
 
-}
+    /**
+     * Get State and city list
+     * @return List<StateDTO>
+     */
+    @Override
+    public List<StateDTO> getStateAndCity() {
+        log.info("Inside getStateAndCity()");
+        return stateRepository.findAll().stream().map(state -> {
+            return new StateDTO(state.getId(), state.getName(), state.getCity());
+        }).collect(Collectors.toList());
+    }
+    }
+
+
+
